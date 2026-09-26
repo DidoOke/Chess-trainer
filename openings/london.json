@@ -1,0 +1,22 @@
+{
+  "name": "London System",
+  "color": "w",
+  "lines": [
+    {
+      "name": "Main Line",
+      "sequence": [
+        { "move": "d2d4", "note": "1. d4 - Control the center and open diagonals for queen and bishop." },
+        { "move": "d7d5", "response": true },
+        { "move": "c1f4", "note": "2. Bf4 - The hallmark move of the London System, developing the bishop outside the pawn chain." },
+        { "move": "g8f6", "response": true },
+        { "move": "e2e3", "note": "3. e3 - Solidify the d4 pawn and prepare light-squared bishop development." },
+        { "move": "c7c5", "response": true },
+        { "move": "c2c3", "note": "4. c3 - Reinforce the d4 center pawn against Black's c5 challenge." },
+        { "move": "b8c6", "response": true },
+        { "move": "b1d2", "note": "5. Nd2 - Support the center and prepare for kingside development." },
+        { "move": "e7e6", "response": true },
+        { "move": "g1f3", "note": "6. Ngf3 - Develop the king's knight to its optimal square." }
+      ]
+    }
+  ]
+}

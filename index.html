@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess vs Stockfish</title>
+    <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar Navigation -->
+        <nav class="dash-sidebar">
+            <div class="brand">
+                <h2>Chess Trainer</h2>
+            </div>
+            <ul class="nav-links">
+                <li class="active"><a href="#" id="nav-home">Play</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Home Screen -->
+            <div id="home-screen" class="screen active">
+                <div class="home-container">
+                    <div class="panel main-panel">
+                        <h2>Play Modes</h2>
+                        <div class="card-grid">
+                            <button class="card-btn" id="btn-free-play">
+                                <h3>Play vs Stockfish</h3>
+                                <p>Test your skills against the engine with live evaluation</p>
+                            </button>
+                            <button class="card-btn" id="btn-opening-trainer">
+                                <h3>Opening Trainer</h3>
+                                <p>Master chess theory and key opening lines</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Opening Selection Screen -->
+            <div id="opening-selection-screen" class="screen">
+                <div class="home-container">
+                    <div class="panel main-panel">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                            <h2>Select Opening</h2>
+                            <button class="btn btn-secondary" id="btn-back-home">Back</button>
+                        </div>
+                        <div class="card-grid" id="opening-list">
+                            <button class="card-btn opening-btn" data-file="openings/london.json">
+                                <h3>London System</h3>
+                                <p>Solid, system-based opening characterized by 1.d4, 2.Bf4 and 3.e3.</p>
+                            </button>
+                            <button class="card-btn opening-btn" data-file="openings/italian.json">
+                                <h3>Italian Game</h3>
+                                <p>Classical open game starting with 1.e4, 2.Nf3 and 3.Bc4 targeting f7.</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Screen -->
+            <div id="game-screen" class="screen">
+                <div class="game-container">
+                    <!-- Evaluation Bar -->
+                    <div class="eval-container">
+                        <div class="eval-bar-black"></div>
+                        <div class="eval-bar-white" id="eval-bar"></div>
+                        <div class="eval-score white-advantage" id="eval-score">0.0</div>
+                    </div>
+
+                    <!-- Chess Board -->
+                    <div id="board"></div>
+
+                    <!-- Sidebar -->
+                    <div class="game-sidebar">
+                        <div class="status-panel">
+                            <div>
+                                <div class="status-title">Status</div>
+                                <div id="statusBox">Your turn (White)</div>
+                            </div>
+                            <div>
+                                <div class="status-title">Move Feedback</div>
+                                <div id="moveFeedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="status-panel trainer-panel" id="trainer-panel" style="display: none; margin-top: 20px;">
+                            <div class="status-title">Trainer Notes</div>
+                            <div id="trainer-notes">Make your move to start learning.</div>
+                        </div>
+                        
+                        <div class="game-controls">
+                            <button class="btn btn-secondary" id="btn-takeback">Takeback Move</button>
+                            <button class="btn btn-secondary" id="btn-restart">Restart Game</button>
+                            <button class="btn btn-secondary" id="btn-back-menu">Back to Menu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+    <script src="./renderer.js"></script>
+</body>
+</html>

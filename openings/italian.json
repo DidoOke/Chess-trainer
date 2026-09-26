@@ -1,0 +1,20 @@
+{
+  "name": "Italian Game",
+  "color": "w",
+  "lines": [
+    {
+      "name": "Giuoco Piano",
+      "sequence": [
+        { "move": "e2e4", "note": "1. e4 - Claim control of the center and open lines for queen and bishop." },
+        { "move": "e7e5", "response": true },
+        { "move": "g1f3", "note": "2. Nf3 - Develop knight with an attack on Black's e5 pawn." },
+        { "move": "b8c6", "response": true },
+        { "move": "f1c4", "note": "3. Bc4 - The Italian Game! Target Black's vulnerable f7 square." },
+        { "move": "f8c5", "response": true },
+        { "move": "c2c3", "note": "4. c3 - Prepare central expansion with d4." },
+        { "move": "g8f6", "response": true },
+        { "move": "d2d3", "note": "5. d3 - Solidify the center and prepare kingside castling." }
+      ]
+    }
+  ]
+}

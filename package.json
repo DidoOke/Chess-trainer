@@ -1,0 +1,26 @@
+{
+  "name": "electron-chess",
+  "version": "1.0.0",
+  "description": "Desktop chess app with live Stockfish 18 evaluation and opening theory trainer",
+  "main": "main.js",
+  "scripts": {
+    "postinstall": "node scripts/setup-stockfish.js",
+    "start": "electron .",
+    "build": "electron-builder --win --x64",
+    "setup:linux": "bash scripts/setup-linux.sh"
+  },
+  "build": {
+    "appId": "com.chess.stockfishapp",
+    "productName": "Chess vs Engine",
+    "win": {
+      "target": "portable"
+    },
+    "extraResources": [
+      "stockfish.exe"
+    ]
+  },
+  "devDependencies": {
+    "electron": "30.0.0",
+    "electron-builder": "^24.13.3"
+  }
+}
